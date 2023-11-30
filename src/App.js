@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Body = styled.div`
   background-color: ${({ theme }) => theme.bg};
@@ -37,6 +38,10 @@ const Wrapper = styled.div`
 function App() {
   const [darkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
+  const modalVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
       <Router>
@@ -52,6 +57,7 @@ function App() {
             <Contact />
           </Wrapper>
           <Footer />
+
           {openModal.state && (
             <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
           )}

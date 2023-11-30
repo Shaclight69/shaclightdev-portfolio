@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Button = styled.button`
   display: none;
@@ -121,6 +122,10 @@ const Description = styled.div`
 // `;
 
 const ProjectCards = ({ project, setOpenModal }) => {
+  const modalVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0 },
+  };
   return (
     <Card onClick={() => setOpenModal({ state: true, project: project })}>
       <Image src={project.image} />

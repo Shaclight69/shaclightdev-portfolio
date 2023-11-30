@@ -1,9 +1,10 @@
 import { CloseRounded } from "@mui/icons-material";
-import { Modal } from "@mui/material";
+import { FormControlLabel, Grow, Modal, Slide } from "@mui/material";
 import React from "react";
 import styled from "styled-components";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Container = styled.div`
   width: 100%;
@@ -186,52 +187,65 @@ const Button = styled.a`
 `;
 
 const index = ({ openModal, setOpenModal }) => {
+  const modalVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: { opacity: 1, y: 0 },
+  };
   const project = openModal?.project;
   return (
     <Modal
       open={true}
       onClose={() => setOpenModal({ state: false, project: null })}
+      closeAfterTransition
     >
       <Container>
-        <Wrapper>
-          <CloseRounded
-            style={{
-              position: "absolute",
-              top: "10px",
-              right: "20px",
-              cursor: "pointer",
-            }}
-            onClick={() => setOpenModal({ state: false, project: null })}
-          />
-          <Image src={project?.image} />
-          <Title>{project?.title}</Title>
-          <Date>{project.date}</Date>
-          <Tags>
-            {project?.tags.map((tag) => (
-              <Tag>{tag}</Tag>
-            ))}
-          </Tags>
-          <Desc>{project?.description}</Desc>
-          <ButtonGroup>
-            {project?.webapp ? (
-              <>
-                <Button dull href={project?.github} target="new">
-                  View Code <GitHubIcon style={{ marginLeft: "0.5rem" }} />
-                </Button>
-                <Button href={project?.webapp} target="new">
-                  View Live App{" "}
-                  <LanguageIcon style={{ marginLeft: "0.5rem" }} />
-                </Button>
-              </>
-            ) : (
-              <>
-                <Button href={project?.github} target="new">
-                  View Code
-                </Button>
-              </>
-            )}
-          </ButtonGroup>
-        </Wrapper>
+        <Slide
+          in={true}
+          direction="up"
+          timeout={400}
+          mountOnEnter
+          unmountOnExit
+        >
+          <Wrapper>
+            <CloseRounded
+              style={{
+                position: "absolute",
+                top: "10px",
+                right: "20px",
+                cursor: "pointer",
+              }}
+              onClick={() => setOpenModal({ state: false, project: null })}
+            />
+            <Image src={project?.image} />
+            <Title>{project?.title}</Title>
+            <Date>{project.date}</Date>
+            <Tags>
+              {project?.tags.map((tag) => (
+                <Tag>{tag}</Tag>
+              ))}
+            </Tags>
+            <Desc>{project?.description}</Desc>
+            <ButtonGroup>
+              {project?.webapp ? (
+                <>
+                  <Button dull href={project?.github} target="new">
+                    View Code <GitHubIcon style={{ marginLeft: "0.5rem" }} />
+                  </Button>
+                  <Button href={project?.webapp} target="new">
+                    View Live App{" "}
+                    <LanguageIcon style={{ marginLeft: "0.5rem" }} />
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button href={project?.github} target="new">
+                    View Code <GitHubIcon style={{ marginLeft: "0.5rem" }} />
+                  </Button>
+                </>
+              )}
+            </ButtonGroup>
+          </Wrapper>
+        </Slide>
       </Container>
     </Modal>
   );

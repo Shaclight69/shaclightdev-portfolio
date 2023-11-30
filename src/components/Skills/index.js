@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { skills } from "../../data/constants";
+import { motion } from "framer-motion";
 
 const Container = styled.div`
   display: flex;
@@ -116,29 +117,55 @@ const SkillImage = styled.img`
 `;
 
 const Skills = () => {
+  const skillEffect = {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 1.5,
+      bounce: 0.1,
+    },
+  };
+
+  // const titleEffect = {
+  //   x: 0,
+  //   opacity: 1,
+  //   transition: { type: "spring", duration: 2, bounce: 0.3 },
+  // };
+
   return (
     <Container id="skills">
       <Wrapper>
-        <Title>Skills</Title>
-        <Desc>
-          The skills mentioned here showcase what I learned and refined during
-          my bachelor's program, covering self-automation, academic pursuits,
-          and personal projects.
-        </Desc>
-        <SkillsContainer>
-          {skills.map((skill) => (
-            <Skill>
-              <SkillTitle>{skill.title}</SkillTitle>
-              <SkillList>
-                {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image} />
-                  </SkillItem>
-                ))}
-              </SkillList>
-            </Skill>
-          ))}
-        </SkillsContainer>
+        <motion.div
+          whileInView={skillEffect}
+          initial={{ y: "-10%", opacity: 0 }}
+        >
+          <Title>Skills</Title>
+          <Desc>
+            The skills mentioned here showcase what I learned and refined during
+            my bachelor's program, covering self-automation, academic pursuits,
+            and personal projects.
+          </Desc>
+        </motion.div>
+        <motion.div
+          whileInView={skillEffect}
+          initial={{ y: "-3%", opacity: 0 }}
+        >
+          <SkillsContainer>
+            {skills.map((skill) => (
+              <Skill>
+                <SkillTitle>{skill.title}</SkillTitle>
+                <SkillList>
+                  {skill.skills.map((item) => (
+                    <SkillItem>
+                      <SkillImage src={item.image} />
+                    </SkillItem>
+                  ))}
+                </SkillList>
+              </Skill>
+            ))}
+          </SkillsContainer>
+        </motion.div>
       </Wrapper>
     </Container>
   );

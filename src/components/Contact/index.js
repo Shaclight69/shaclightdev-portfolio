@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Toaster, toast } from "sonner";
+import { motion } from "framer-motion";
 
 const Container = styled.div`
   display: flex;
@@ -157,15 +158,32 @@ const Contact = () => {
         }
       );
   };
-
+  const skillEffect = {
+    y: 0,
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 1.5,
+      bounce: 0.1,
+    },
+  };
   return (
     <Container id="contact">
       <Toaster position="bottom-left" expand={false} richColors />
       <Wrapper>
-        <Title>Contact</Title>
-        <Desc>
-          Feel free to reach out to me for any questions or opportunities!
-        </Desc>
+        <motion.div
+          whileInView={skillEffect}
+          initial={{ y: "-10%", opacity: 0 }}
+        >
+          <Title>Contact</Title>
+          <Desc>
+            Feel free to reach out to me for any questions or opportunities!
+          </Desc>
+        </motion.div>
+        {/* <motion.div
+          whileInView={skillEffect}
+          initial={{ y: "-10%", opacity: 0 }}
+        > */}
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Write me a message 📧</ContactTitle>
           <ContactInput
@@ -189,6 +207,7 @@ const Contact = () => {
           />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
+        {/* </motion.div> */}
       </Wrapper>
     </Container>
   );

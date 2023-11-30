@@ -1,6 +1,7 @@
 import { Link as LinkR } from "react-router-dom";
 import styled from "styled-components";
 // import _default from "../../themes/default";
+import { Link } from "react-scroll";
 
 export const Nav = styled.div`
   background-color: ${({ theme }) => theme.card_light};
@@ -60,24 +61,42 @@ export const NavItems = styled.ul`
   }
 `;
 
-export const NavLink = styled.a`
+// export const NavLink = styled.a`
+//   color: ${({ theme }) => theme.text_primary};
+//   font-weight: 500;
+//   cursor: pointer;
+//   transition: all 0.2s ease-in-out;
+//   text-decoration: none;
+//   :hover {
+//     color: ${({ theme }) => theme.primary};
+//   }
+
+//   &.active {
+//     border-bottom: 2px solid ${({ theme }) => theme.text_primary};
+//   }
+//   @media (max-width: 880px) {
+//     font-size: 95%;
+//   }
+// `;
+
+export const NavLink = styled(Link)`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  :hover {
-    color: ${({ theme }) => theme.primary};
+  &:hover {
+    color: #67cdc9;
   }
 
   &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.text_primary};
+    color: #7de3e1;
   }
   @media (max-width: 880px) {
     font-size: 95%;
   }
 `;
-
+/* #4FC2BF #66D3D2 #7DE3E1; */
 export const SocialMediaIcons = styled.div`
   display: flex;
   @media (max-width: 960px) {
@@ -89,7 +108,8 @@ export const SocialMediaIcon = styled.a`
   display: inline-block;
   margin: 0 0.5rem;
   font-size: 1.5rem;
-  color: rgb(53, 162, 159, 1);
+  //color: rgb(53, 162, 159, 1);
+  color: #4fc2bf;
   transition: color 0.2s ease-in-out;
   font-weight: 500;
   cursor: pointer;
@@ -153,6 +173,12 @@ export const MobileIcon = styled.div`
   }
 `;
 
+// export const FaBarS = styled(FaBars)`
+// @media screen and (min-width: 768px) {
+
+// }
+// `
+
 export const MobileMenu = styled.div`
   display: flex;
   flex-direction: column;
@@ -171,6 +197,9 @@ export const MobileMenu = styled.div`
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
   z-index: ${({ isOpen }) => (isOpen ? "1000" : "-1000")};
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const MobileMenuItems = styled.ul`
@@ -226,13 +255,12 @@ export const MobileLink = styled.a`
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  :hover {
-    color: ${({ theme }) => theme.primary};
+  &:hover {
+    color: #67cdc9;
   }
 
   &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.primary};
-  }
+    color: #7de3e1;
 `;
 
 export const MobileNavLogo = styled(LinkR)`
