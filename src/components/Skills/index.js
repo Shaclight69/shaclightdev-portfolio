@@ -127,12 +127,6 @@ const Skills = () => {
     },
   };
 
-  // const titleEffect = {
-  //   x: 0,
-  //   opacity: 1,
-  //   transition: { type: "spring", duration: 2, bounce: 0.3 },
-  // };
-
   return (
     <Container id="skills">
       <Wrapper>

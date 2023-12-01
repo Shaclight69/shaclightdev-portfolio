@@ -180,10 +180,7 @@ const Contact = () => {
             Feel free to reach out to me for any questions or opportunities!
           </Desc>
         </motion.div>
-        {/* <motion.div
-          whileInView={skillEffect}
-          initial={{ y: "-10%", opacity: 0 }}
-        > */}
+
         <ContactForm ref={form} onSubmit={handleSubmit}>
           <ContactTitle>Write me a message 📧</ContactTitle>
           <ContactInput
@@ -192,6 +189,7 @@ const Contact = () => {
             type="email"
             name="form_email"
           />
+
           <ContactInput
             required
             placeholder="Your Name"

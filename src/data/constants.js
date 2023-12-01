@@ -4,11 +4,10 @@ export const Bio = {
   description:
     "I'm a Bachelor's Graduate in Information Technology focusing on Information Systems Development, eager to leverage my academic knowledge and practical experience to contribute effectively in a dynamic professional environment.",
   github: "https://github.com/Shaclight69",
-  resume:
-    "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbqpV7ADNaETA/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/shaclight/",
   insta: "https://www.instagram.com/cxldghoste/",
   facebook: "https://www.facebook.com/dhiaghorbel69/",
+  resume: "shaclightdev23.pdf",
 };
 
 export const skills = [
@@ -311,8 +310,8 @@ export const projects = [
       "Git",
     ],
     category: "personal app",
-    github: "https://github.com/Shaclight69/spotify-clone",
-    webapp: "https://xspotify-clone.vercel.app/",
+    github: "https://github.com/Shaclight69/scraprice_cron",
+    webapp: "https://scraprice.vercel.app/",
   },
   {
     id: 3,

@@ -1,6 +1,5 @@
 import { Link as LinkR } from "react-router-dom";
 import styled from "styled-components";
-// import _default from "../../themes/default";
 import { Link } from "react-scroll";
 
 export const Nav = styled.div`
@@ -61,24 +60,6 @@ export const NavItems = styled.ul`
   }
 `;
 
-// export const NavLink = styled.a`
-//   color: ${({ theme }) => theme.text_primary};
-//   font-weight: 500;
-//   cursor: pointer;
-//   transition: all 0.2s ease-in-out;
-//   text-decoration: none;
-//   :hover {
-//     color: ${({ theme }) => theme.primary};
-//   }
-
-//   &.active {
-//     border-bottom: 2px solid ${({ theme }) => theme.text_primary};
-//   }
-//   @media (max-width: 880px) {
-//     font-size: 95%;
-//   }
-// `;
-
 export const NavLink = styled(Link)`
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
@@ -108,7 +89,6 @@ export const SocialMediaIcon = styled.a`
   display: inline-block;
   margin: 0 0.5rem;
   font-size: 1.5rem;
-  //color: rgb(53, 162, 159, 1);
   color: #4fc2bf;
   transition: color 0.2s ease-in-out;
   font-weight: 500;
@@ -172,12 +152,6 @@ export const MobileIcon = styled.div`
     color: ${({ theme }) => theme.text_primary};
   }
 `;
-
-// export const FaBarS = styled(FaBars)`
-// @media screen and (min-width: 768px) {
-
-// }
-// `
 
 export const MobileMenu = styled.div`
   display: flex;

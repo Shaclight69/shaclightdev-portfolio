@@ -42,31 +42,6 @@ const HeroSection = () => {
             whileInView={skillEffect}
             initial={{ x: "-3%", opacity: 0 }}
           >
-            {/*  
-          </motion.div>
-          // <motion.div
-          
-          //   variants={{
-          //     hidden: {
-          //       // opacity: 0,
-          //       // y: "-50%",
-          //       x: "-3%",
-          //       opacity: 0,
-          //     },
-          //     visible: {
-          //       opacity: 1,
-          //       // y: 0,
-          //       x: 0,
-          //       transition: {
-          //         type: "spring",
-          //         duration: 1.7,
-          //       },
-          //     },
-          //   }}
-          //   initial="hidden"
-          //   whileInView="visible"
-          // >*/}
-
             <HeroLeftContainer id="Left">
               <Title>{Bio.name}</Title>
               <TextLoop>
@@ -89,8 +64,8 @@ const HeroSection = () => {
                     style={{ fontSize: "1.7rem", marginLeft: "0.2rem" }}
                   />
                 </ResumeButton>
-                <GButton>
-                  Github{" "}
+                <GButton href={Bio.github} target="display">
+                  Github
                   <GitHubIcon
                     style={{ fontSize: "1.7rem", marginLeft: "0.2rem" }}
                   />
@@ -109,23 +84,3 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
-
-// variants={{
-//   hidden: { opacity: 0, y: 75 },
-//   visible: { opacity: 1, y: 0 },
-// }}
-// initial="hidden"
-// animate="visible"
-// transition={{
-//   type: "spring",
-//   duration: 0.25,
-//   delay: 0.25,
-//   bounce: 0.5,
-// }}
-
-// initial={{ x: "-80%", opacity: 0 }}
-// whileInView={{
-//   x: 0,
-//   opacity: 1,
-//   transition: { type: "spring", duration: 1, bounce: 0.5 },
-// }}
