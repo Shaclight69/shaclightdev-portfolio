@@ -1,5 +1,3 @@
-import React from "react";
-import { useState } from "react";
 import {
   Container,
   Wrapper,
@@ -10,12 +8,13 @@ import {
   ToggleButton,
   Divider,
 } from "./ProjectsStyle";
+import React, { useState } from "react";
 import ProjectCard from "../Cards/ProjectCards";
 import { projects } from "../../data/constants";
 import { motion } from "framer-motion";
 
 const Projects = ({ openModal, setOpenModal }) => {
-  const skillEffect = {
+  const prjtvariants = {
     y: 0,
     opacity: 1,
     transition: {
@@ -29,7 +28,7 @@ const Projects = ({ openModal, setOpenModal }) => {
     <Container id="projects">
       <Wrapper>
         <motion.div
-          whileInView={skillEffect}
+          whileInView={prjtvariants}
           initial={{ y: "-10%", opacity: 0 }}
         >
           <Title>Projects</Title>
@@ -39,7 +38,7 @@ const Projects = ({ openModal, setOpenModal }) => {
           </Desc>
         </motion.div>
         <motion.div
-          whileInView={skillEffect}
+          whileInView={prjtvariants}
           initial={{ y: "-5%", opacity: 0 }}
         >
           <ToggleButtonGroup>
@@ -89,7 +88,7 @@ const Projects = ({ openModal, setOpenModal }) => {
           </ToggleButtonGroup>
         </motion.div>
         <motion.div
-          whileInView={skillEffect}
+          whileInView={prjtvariants}
           initial={{ y: "-3%", opacity: 0 }}
         >
           <CardContainer>

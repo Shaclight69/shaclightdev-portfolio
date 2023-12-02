@@ -1,6 +1,6 @@
 import { ThemeProvider } from "styled-components";
 import { useState } from "react";
-import { darkTheme, lightTheme } from "./utils/Themes.js";
+import { darkTheme, lightTheme } from "./utils/Themes";
 import Navbar from "./components/Navbar";
 import "./App.css";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -35,7 +35,8 @@ const Wrapper = styled.div`
 `;
 
 function App() {
-  const [darkMode] = useState(true);
+  // eslint-disable-line
+  const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
 
   return (

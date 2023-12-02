@@ -203,7 +203,7 @@ export const experiences = [
     role: "Software Developer Intern",
     company: "The Tunisian Post",
     date: "January 2023",
-    desc: "Conceived, designed, and implemented an admin dashboard with redux toolkit query empowering administrators with data grids and graphical representations, offering insights into the company's performance.",
+    desc: "Conceived and implemented an admin dashboard with empowering administrators with data grids and graphical representations, offering insights into the company's performance.",
     skills: [
       "React",
       "Redux",

@@ -1,11 +1,6 @@
-import { CloseRounded } from "@mui/icons-material";
-import { Grow, Modal } from "@mui/material";
-import React from "react";
 import styled from "styled-components";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LanguageIcon from "@mui/icons-material/Language";
 
-const Container = styled.div`
+export const Container = styled.div`
   width: 100%;
   height: 100%;
   position: absolute;
@@ -19,7 +14,7 @@ const Container = styled.div`
   transition: all 0.5s ease;
 `;
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   max-width: 800px;
   width: 100%;
   border-radius: 16px;
@@ -33,7 +28,7 @@ const Wrapper = styled.div`
   position: relative;
 `;
 
-const Title = styled.div`
+export const Title = styled.div`
   font-size: 28px;
   font-weight: 600;
   color: ${({ theme }) => theme.text_primary};
@@ -44,7 +39,7 @@ const Title = styled.div`
   }
 `;
 
-const Date = styled.div`
+export const Date = styled.div`
   font-size: 16px;
   margin: 2px 6px;
   font-weight: 400;
@@ -54,7 +49,7 @@ const Date = styled.div`
   }
 `;
 
-const Desc = styled.div`
+export const Desc = styled.div`
   font-size: 16px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary};
@@ -65,7 +60,7 @@ const Desc = styled.div`
   }
 `;
 
-const Image = styled.img`
+export const Image = styled.img`
   width: 100%;
   object-fit: cover;
   border-radius: 12px;
@@ -73,7 +68,7 @@ const Image = styled.img`
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 `;
 
-const Tags = styled.div`
+export const Tags = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin: 8px 0px;
@@ -82,7 +77,7 @@ const Tags = styled.div`
   }
 `;
 
-const Tag = styled.div`
+export const Tag = styled.div`
   font-size: 14px;
   font-weight: 400;
   color: ${({ theme }) => theme.primary};
@@ -95,14 +90,14 @@ const Tag = styled.div`
   }
 `;
 
-const ButtonGroup = styled.div`
+export const ButtonGroup = styled.div`
   display: flex;
   justify-content: flex-end;
   margin: 12px 0px;
   gap: 12px;
 `;
 
-const Button = styled.a`
+export const Button = styled.a`
   width: 100%;
   text-align: center;
   display: inline-flex;
@@ -133,64 +128,3 @@ const Button = styled.a`
     font-size: 12px;
   }
 `;
-
-const index = ({ openModal, setOpenModal }) => {
-  const project = openModal?.project;
-  return (
-    <Modal
-      open={true}
-      onClose={() => setOpenModal({ state: false, project: null })}
-      closeAfterTransition
-    >
-      <Container>
-        <Grow
-          in={true}
-          style={{ transformOrigin: "0 0 0" }}
-          {...(true ? { timeout: 900 } : {})}
-        >
-          <Wrapper>
-            <CloseRounded
-              style={{
-                position: "absolute",
-                top: "10px",
-                right: "20px",
-                cursor: "pointer",
-              }}
-              onClick={() => setOpenModal({ state: false, project: null })}
-            />
-            <Image src={project?.image} />
-            <Title>{project?.title}</Title>
-            <Date>{project.date}</Date>
-            <Tags>
-              {project?.tags.map((tag) => (
-                <Tag>{tag}</Tag>
-              ))}
-            </Tags>
-            <Desc>{project?.description}</Desc>
-            <ButtonGroup>
-              {project?.webapp ? (
-                <>
-                  <Button dull href={project?.github} target="new">
-                    View Code <GitHubIcon style={{ marginLeft: "0.5rem" }} />
-                  </Button>
-                  <Button href={project?.webapp} target="new">
-                    View Live App{" "}
-                    <LanguageIcon style={{ marginLeft: "0.5rem" }} />
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <Button href={project?.github} target="new">
-                    View Code <GitHubIcon style={{ marginLeft: "0.5rem" }} />
-                  </Button>
-                </>
-              )}
-            </ButtonGroup>
-          </Wrapper>
-        </Grow>
-      </Container>
-    </Modal>
-  );
-};
-
-export default index;

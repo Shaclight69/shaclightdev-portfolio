@@ -1,7 +1,6 @@
 import React from "react";
-import { Div } from "./HeroBgAnimationStyle";
 const HeroBgAnimation = () => (
-  <Div>
+  <div style={{ width: 600, height: 500 }}>
     <svg
       className="BgAnimation__svg"
       viewBox="0 0 602 602"
@@ -359,7 +358,7 @@ const HeroBgAnimation = () => (
         </linearGradient>
       </defs>
     </svg>
-  </Div>
+  </div>
 );
 
 export default HeroBgAnimation;
