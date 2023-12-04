@@ -35,7 +35,7 @@ const Wrapper = styled.div`
 `;
 
 function App() {
-  // eslint-disable-line
+  // eslint-disable-next-line
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
 

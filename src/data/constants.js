@@ -7,7 +7,7 @@ export const Bio = {
   linkedin: "https://www.linkedin.com/in/shaclight/",
   insta: "https://www.instagram.com/cxldghoste/",
   facebook: "https://www.facebook.com/dhiaghorbel69/",
-  resume: "shaclightdev23.pdf",
+  resume: "resume.pdf",
 };
 
 export const skills = [
