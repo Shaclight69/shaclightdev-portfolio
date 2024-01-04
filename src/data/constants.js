@@ -139,11 +139,6 @@ export const skills = [
         image: "https://skillicons.dev/icons?i=vercel",
       },
       {
-        name: "Render",
-        image:
-          "https://render.com/favicon.svg?v=4ab9a3fc5e06e2253bb579a9609a1ecc",
-      },
-      {
         name: "Netlify",
         image: "https://skillicons.dev/icons?i=netlify",
       },
