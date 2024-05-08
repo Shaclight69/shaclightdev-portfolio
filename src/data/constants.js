@@ -5,7 +5,7 @@ export const Bio = {
     "I'm a Bachelor's Graduate in Information Technology focusing on Information Systems Development, eager to leverage my academic knowledge and practical experience to contribute effectively in a dynamic professional environment.",
   github: "https://github.com/Shaclight69",
   linkedin: "https://www.linkedin.com/in/shaclight/",
-  insta: "https://www.instagram.com/cxldghoste/",
+  discord: "https://discord.com/users/317281861019631616",
   facebook: "https://www.facebook.com/dhiaghorbel69/",
   resume: "resume.pdf",
 };

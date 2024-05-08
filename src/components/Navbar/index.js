@@ -15,7 +15,8 @@ import {
 } from "./NavbarStyledComponent";
 import { GiJesterHat } from "react-icons/gi";
 import { FaBars, FaLinkedin } from "react-icons/fa";
-import { RiInstagramFill, RiMessengerFill } from "react-icons/ri";
+import { SiDiscord } from "react-icons/si";
+import { RiMessengerFill } from "react-icons/ri";
 import { Bio } from "../../data/constants";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -125,8 +126,8 @@ const Navbar = () => {
             <SocialMediaIcon href={Bio.facebook} target="display">
               <RiMessengerFill />
             </SocialMediaIcon>
-            <SocialMediaIcon href={Bio.insta} target="display">
-              <RiInstagramFill />
+            <SocialMediaIcon href={Bio.discord} target="display">
+              <SiDiscord />
             </SocialMediaIcon>
           </SocialMediaIcons>
         </ButtonContainer>
@@ -187,8 +188,8 @@ const Navbar = () => {
                   <SocialMediaIcon href={Bio.facebook} target="display">
                     <RiMessengerFill />
                   </SocialMediaIcon>
-                  <SocialMediaIcon href={Bio.insta} target="display">
-                    <RiInstagramFill />
+                  <SocialMediaIcon href={Bio.discord} target="display">
+                    <SiDiscord />
                   </SocialMediaIcon>
                 </SocialMediaIcons>
               </MobileMenu>
