@@ -266,7 +266,7 @@ export const projects = [
     title: "Workrush",
     date: "Dec 2023 - Jan 2024",
     description:
-      "Directed development of a Chat App utilizing Typescript, and admitting Pusher for real-time communication. Utilized Prisma with MongoDB for streamlined database operations, integrated user authentication featuring Google and GitHub integration using NextAuth, and incorporated file-sharing capabilities with Cloudinary. Designed and implemented sleek responsive UI using React and NextJS, TailwindCSS. Applied Git for version control and executed the application deployment on the Vercel platform.",
+      "Led the development of a Next.js task manager application with React and Styled-components, merging Prisma with MongoDB, enabling authentication via Clerk supporting Google and GitHub integration.",
     image: "https://i.imgur.com/sIojKto.png",
     tags: [
       "React",
