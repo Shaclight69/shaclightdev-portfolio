@@ -168,24 +168,24 @@ export const experiences = [
   {
     id: 0,
     img: "https://quomeda.com/images/quomeda_logo.png",
-    role: "Full Stack Developer - Freelance Contract",
+    role: "Full Stack Developer - Freelance",
     company: "Quomeda - Remote",
     date: "May 2024 - Present",
-    desc: "• Maintained and developed web applications, collaborating with designers and developers to implement user interfaces and integrate back-end services. Conducted code reviews, adhered to best practices, and resolved technical issues. Contributed to the continuous improvement of the platform and development processes.",
+    desc: "• Implemented UI redesigns from Figma prototypes and developed an integrated mailbox using AWS, along with a CRM email campaign scheduling system.",
     skills: [
       "React",
-      "Redux",
       "Material-UI",
-      "PostgreSQL",
-      "Express.js",
-      "Node.js",
+      "React-Query",
       "TailwindCSS",
+      "PostgreSQL",
+      "Node.js",
+      "Express.js",
     ],
   },
   {
     id: 1,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOU7r51Q9ma4_qR5ZA4KJnKWqy8BoPnfjRcC3-uVgUMQ&s",
-    role: "Full Stack Engineer Intern",
+    role: "Full Stack Engineer - Internship",
     company: "UCOD - Remote",
     date: "January 2024 - March 2024",
     desc: "• Developed new features, translating Figma designs into functional components using Remix, NextUI, and TailwindCSS, while implementing i18next for language translation. Built RESTful APIs utilizing Prisma ORM with PostgreSQL. Employed Zustand store middleware for state management and ImageKit for image optimization.",
@@ -205,7 +205,7 @@ export const experiences = [
   {
     id: 2,
     img: "https://www.ftbb.org.tn/wp-content/uploads/2017/09/logo-laposte.png",
-    role: "Full Stack Developer Intern",
+    role: "Full Stack Developer - Internship",
     company: "The Tunisian Post - Hybrid",
     date: "February 2023 - June 2023",
     desc: "• Concepted, designed, and developed a stamps e-commerce application with chatbot integration streamlining the management of philatelic activities within Tunisia.",
@@ -232,7 +232,7 @@ export const experiences = [
   {
     id: 3,
     img: "https://www.ftbb.org.tn/wp-content/uploads/2017/09/logo-laposte.png",
-    role: "Software Developer Intern",
+    role: "Frontend Developer - Internship",
     company: "The Tunisian Post - On-site",
     date: "January 2023",
     desc: "• Conceived and implemented an admin dashboard with empowering administrators with data grids and graphical representations, offering insights into the company's performance.",
@@ -253,9 +253,9 @@ export const experiences = [
   },
   {
     id: 4,
-    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBXE9c54PDm7X_abie6K9or2AZ8T0frVwvZ60ZLjQOkcZD9QrxgGzWzMblr_GJEmpjO3k&usqp=CAU",
-    role: "Junior Developer Intern",
-    company: "TIS Circuits - On-site",
+    img: "https://media.licdn.com/dms/image/v2/C560BAQGjM8a5CJ7AQA/company-logo_200_200/company-logo_200_200/0/1669827060380/allcircuits_logo?e=1733961600&v=beta&t=Id_VPbWEKwdBDCy7vZma0bRXmfuZBuPtOAxUiOraLXY",
+    role: "Junior Fullstack Developer - Internship",
+    company: "ALL Circuits - On-site",
     date: "February 2022 ",
     desc: "• Built an employment recruitment web application with C# to enhance operational efficiency for human resources professionals overseeing the hiring process.",
     skills: [
@@ -273,7 +273,7 @@ export const experiences = [
     role: "Student Intern",
     company: "Afrochim",
     date: "June 2021",
-    desc: "Presented a brief overview of the introductory professional life internship to gain initial practical experience in a professional work environment.",
+    desc: "• Presented a brief overview of the introductory professional life internship to gain initial practical experience in a professional work environment.",
   },
 ];
 
