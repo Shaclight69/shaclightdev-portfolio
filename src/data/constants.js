@@ -253,7 +253,7 @@ export const experiences = [
   },
   {
     id: 4,
-    img: "https://media.licdn.com/dms/image/v2/C560BAQGjM8a5CJ7AQA/company-logo_200_200/company-logo_200_200/0/1669827060380/allcircuits_logo?e=1733961600&v=beta&t=Id_VPbWEKwdBDCy7vZma0bRXmfuZBuPtOAxUiOraLXY",
+    img: "https://cdn.prod.website-files.com/60bf5c8e42dfa84360790054/65cc931b3e84ba13f2327241_Logo%20ALL%20Circuits%20Rouge.svg",
     role: "Junior Fullstack Developer - Internship",
     company: "ALL Circuits - On-site",
     date: "February 2022 ",
